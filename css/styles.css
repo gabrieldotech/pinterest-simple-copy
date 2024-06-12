@@ -1,0 +1,281 @@
+        nav {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            color: #000;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+        .logo-icon {
+            width: 60px; 
+            height: auto; 
+            margin-right: 20px; 
+        }
+
+
+        ul {
+            display: flex;
+            list-style: none;
+            margin-right: 20px;
+        }
+
+        li {
+            margin-right: 10px;
+        }
+
+        li a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            
+        }
+
+        input[type="text"] {
+            width: 550px;
+            height: 40px;
+            margin-left: 20px;
+            border-radius: 30px;
+            padding-left: 15px;
+            background-color: rgba(233, 231, 231, 0.87);
+            border: none;
+        }
+
+
+        input[type="text"]::placeholder {
+            padding: 30px;
+            font-weight: bold;
+        }
+        
+
+        .link-container {
+            transition: 0.3s all ease-in-out;
+            padding: 14px;
+            border-radius: 20px;
+        }
+
+        .link-container:hover {
+            background-color: #000;
+            color: #fff;
+            border-color: #000
+        }
+
+        .link-container:hover a {
+            color: #fff; 
+        }
+
+        li:hover a {
+            color: #fff;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 20px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .grid-item {
+            position: relative;
+            overflow: hidden;
+            height: auto;
+        }
+        
+        .grid-item img {
+            width: 100%;
+            height: auto; 
+            object-fit: cover;
+            border-radius: 10px;
+            transition: filter 0.3s ease;
+        }
+
+        .grid-item:hover img {
+            filter: brightness(60%);
+        }
+
+        .grid-item.clicked img {
+            filter: brightness(60%); 
+        }
+
+        .grid-item {
+            position: relative;
+            overflow: hidden; 
+        }
+
+        .save-button {
+            position: absolute;
+            top: 10px; 
+            right: 10px; 
+            background-color: rgb(55, 139, 207);
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            opacity: 0; 
+            transition: opacity 0.3s ease;
+            border-radius: 20px;
+            padding: 15px;
+            font-weight: bold;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            cursor: pointer;
+        }
+
+        .grid-item:hover .save-button {
+            opacity: 1; 
+        }
+
+        .grid-item {
+            position: relative;
+            overflow: hidden;
+            height: 300px; 
+        }
+        
+        .grid-item img {
+            width: 100%;
+            height: 100%; 
+            object-fit: cover; 
+            object-position: center; 
+            border-radius: 10px;
+            transition: filter 0.3s ease;
+        }
+        
+        .grid-item:hover img {
+            filter: brightness(60%);
+        }
+        
+        .grid-item.clicked img {
+            filter: brightness(60%);
+        }
+        
+        .save-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgb(55, 139, 207);
+            color: #fff;
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            transition: 0.3s ease-in-out;
+            font-weight: bold;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .save-button:hover {
+            background-color: rgb(11, 52, 85) ;
+        }
+        
+        .grid-item:hover .save-button {
+            opacity: 1;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 100%;
+            max-height: 80vh;
+        }
+        
+        .close {
+            color: #fff;
+            position: absolute;
+            top: 30px;
+            right: 60px;
+            font-size: 35px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .grid-item img {
+            cursor: pointer;
+        }
+        
+
+        @media only screen and (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 20px; 
+            }
+        
+            ul {
+                margin: 0;
+                padding: 0;
+                text-align: center; 
+            }
+        
+            input[type="text"] {
+                width: calc(100% - 40px);
+                margin: 10px auto; 
+            }
+        
+            .grid-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+                padding: 10px;
+                margin-top: 10px;
+            }
+        
+            .grid-item {
+                flex: 0 0 calc(50% - 10px); 
+                margin-bottom: 20px; 
+            }
+        
+            .save-button {
+                position: relative;
+                bottom: auto;
+                right: auto;
+                margin: 0 auto; 
+                padding: 10px 20px; 
+                font-size: 14px; 
+            }
+        
+            .modal-content {
+                max-width: calc(100% - 20px);
+                max-height: calc(100vh - 120px);
+            }
+        
+            .logo-icon {
+                text-align: center;
+                margin-right: 10px;
+                background-size: 40px;
+                width: 90px;
+                height: auto;
+            }
+
+            .close {
+                margin-right: -25px;
+            }
+        }
+        
+
+
+        
+
+
+
